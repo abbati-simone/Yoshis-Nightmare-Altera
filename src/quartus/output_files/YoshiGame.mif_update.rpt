@@ -1,0 +1,125 @@
+MIF/HEX Update report for YoshiGame
+Wed Jan 16 12:44:32 2019
+Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Wed Jan 16 12:44:32 2019 ;
+; Revision Name         ; YoshiGame                             ;
+; Top-level Entity Name ; display_top                           ;
+; Family                ; Cyclone IV E                          ;
+; Device                ; EP4CE6E22C8                           ;
++-----------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                                                                    ;
++-------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                         ;
++-------------------------------------------------------------------------------------------------------------------+
+; /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/blocks_rom.mif            ;
+; /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/crazy_ghost_rom.mif       ;
+; /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/eggs_rom.mif              ;
+; /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif ;
+; /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif          ;
+; /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/hearts_rom.mif            ;
+; /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/normal_ghost_rom.mif      ;
+; /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/numbers_rom.mif           ;
+; /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/walls_rom.mif             ;
+; /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/yoshi_gost_rom.mif        ;
+; /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/yoshi_rom.mif             ;
++-------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime MIF/HEX Update
+    Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+    Info: Processing started: Wed Jan 16 12:44:31 2019
+Info: Command: quartus_cdb YoshiGame -c YoshiGame --update_mif
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning (113028): 1152 out of 4096 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 16 warnings found, and 10 warnings are reported. File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif Line: 1
+    Warning (113027): Addresses ranging from 184 to 255 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif Line: 1
+    Warning (113027): Addresses ranging from 440 to 511 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif Line: 1
+    Warning (113027): Addresses ranging from 696 to 767 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif Line: 1
+    Warning (113027): Addresses ranging from 952 to 1023 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif Line: 1
+    Warning (113027): Addresses ranging from 1208 to 1279 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif Line: 1
+    Warning (113027): Addresses ranging from 1464 to 1535 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif Line: 1
+    Warning (113027): Addresses ranging from 1720 to 1791 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif Line: 1
+    Warning (113027): Addresses ranging from 1976 to 2047 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif Line: 1
+    Warning (113027): Addresses ranging from 2232 to 2303 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif Line: 1
+    Warning (113027): Addresses ranging from 2488 to 2559 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif Line: 1
+Warning (113028): 956 out of 2048 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 14 warnings found, and 10 warnings are reported. File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 78 to 127 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 206 to 255 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 334 to 383 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 462 to 511 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 590 to 639 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 718 to 767 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 846 to 895 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 974 to 1023 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 1102 to 1151 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 1230 to 1279 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif Line: 1
+Warning (113028): 1536 out of 4096 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/numbers_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 2560 to 4095 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/numbers_rom.mif Line: 1
+Warning (113028): 768 out of 2048 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/yoshi_gost_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 1280 to 2047 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/yoshi_gost_rom.mif Line: 1
+Warning (113028): 768 out of 2048 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/yoshi_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 1280 to 2047 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/yoshi_rom.mif Line: 1
+Warning (113028): 768 out of 2048 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/eggs_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 1280 to 2047 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/eggs_rom.mif Line: 1
+Warning (113028): 768 out of 2048 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/blocks_rom.mif Line: 1
+    Warning (113027): Addresses ranging from 1280 to 2047 are not initialized File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/blocks_rom.mif Line: 1
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/blocks_rom.mif File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/blocks_rom.mif Line: 0
+    Info (39025): Processed Memory Initialization File /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/crazy_ghost_rom.mif File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/crazy_ghost_rom.mif Line: 0
+    Info (39025): Processed Memory Initialization File /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/eggs_rom.mif File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/eggs_rom.mif Line: 0
+    Info (39025): Processed Memory Initialization File /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/game_logo_rom_small_2.mif Line: 0
+    Info (39025): Processed Memory Initialization File /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/gameover_rom.mif Line: 0
+    Info (39025): Processed Memory Initialization File /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/hearts_rom.mif File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/hearts_rom.mif Line: 0
+    Info (39025): Processed Memory Initialization File /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/normal_ghost_rom.mif File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/normal_ghost_rom.mif Line: 0
+    Info (39025): Processed Memory Initialization File /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/numbers_rom.mif File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/numbers_rom.mif Line: 0
+    Info (39025): Processed Memory Initialization File /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/walls_rom.mif File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/walls_rom.mif Line: 0
+    Info (39025): Processed Memory Initialization File /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/yoshi_gost_rom.mif File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/yoshi_gost_rom.mif Line: 0
+    Info (39025): Processed Memory Initialization File /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/yoshi_rom.mif File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/rom_conversion/mif/yoshi_rom.mif Line: 0
+Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 1156 megabytes
+    Info: Processing ended: Wed Jan 16 12:44:32 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

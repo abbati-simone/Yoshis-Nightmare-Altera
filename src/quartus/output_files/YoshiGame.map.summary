@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Jan 16 14:24:44 2019
+Quartus Prime Version : 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+Revision Name : YoshiGame
+Top-level Entity Name : display_top
+Family : Cyclone IV E
+Total logic elements : 3,437
+    Total combinational functions : 3,389
+    Dedicated logic registers : 667
+Total registers : 667
+Total pins : 31
+Total virtual pins : 0
+Total memory bits : 206,848
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

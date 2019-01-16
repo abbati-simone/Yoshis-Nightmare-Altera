@@ -1,0 +1,27 @@
+
+State Machine - |display_top|game_state_machine:game_FSM|game_state_reg
+Name game_state_reg.hit game_state_reg.playing game_state_reg.idle game_state_reg.init game_state_reg.gameover 
+game_state_reg.init 0 0 0 0 0 
+game_state_reg.idle 0 0 1 1 0 
+game_state_reg.playing 0 1 0 1 0 
+game_state_reg.hit 1 0 0 1 0 
+game_state_reg.gameover 0 0 0 1 1 
+
+State Machine - |display_top|eggs:eggs_unit|state_reg
+Name state_reg.respawn 
+state_reg.waiting 0 
+state_reg.respawn 1 
+
+State Machine - |display_top|yoshi_sprite:yoshi_unit|state_reg_y
+Name state_reg_y.jump_extra state_reg_y.jump_up state_reg_y.walking state_reg_y.standing state_reg_y.jump_down 
+state_reg_y.standing 0 0 0 0 0 
+state_reg_y.walking 0 0 1 1 0 
+state_reg_y.jump_up 0 1 0 1 0 
+state_reg_y.jump_extra 1 0 0 1 0 
+state_reg_y.jump_down 0 0 0 1 1 
+
+State Machine - |display_top|yoshi_sprite:yoshi_unit|x_state_reg
+Name x_state_reg.no_dir x_state_reg.right x_state_reg.left 
+x_state_reg.no_dir 0 0 0 
+x_state_reg.left 1 0 1 
+x_state_reg.right 1 1 0 

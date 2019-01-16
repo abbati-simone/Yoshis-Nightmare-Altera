@@ -1,0 +1,125 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hsync",
+					"strict" : false
+				},
+				{
+					"name" : "vsync",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[8]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[9]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[10]",
+					"strict" : false
+				},
+				{
+					"name" : "rgb[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "an[0]",
+					"strict" : false
+				},
+				{
+					"name" : "an[1]",
+					"strict" : false
+				},
+				{
+					"name" : "an[2]",
+					"strict" : false
+				},
+				{
+					"name" : "an[3]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_START",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_LEFT",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_RIGHT",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_UP",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

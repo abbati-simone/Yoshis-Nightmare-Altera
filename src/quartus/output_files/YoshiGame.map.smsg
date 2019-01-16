@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at yoshi_sprite.v(59): object "LEFT" differs only in case from object "left" in the same scope File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/modified/yoshi_sprite.v Line: 59
+Info (10281): Verilog HDL Declaration information at yoshi_sprite.v(60): object "RIGHT" differs only in case from object "right" in the same scope File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/modified/yoshi_sprite.v Line: 60
