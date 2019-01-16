@@ -1,5 +1,5 @@
 Flow report for YoshiGame
-Wed Jan 16 14:26:09 2019
+Wed Jan 16 23:38:14 2019
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Jan 16 14:26:09 2019       ;
+; Flow Status                        ; Successful - Wed Jan 16 23:38:14 2019       ;
 ; Quartus Prime Version              ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                      ; YoshiGame                                   ;
 ; Top-level Entity Name              ; display_top                                 ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/16/2019 14:24:14 ;
+; Start date & time ; 01/16/2019 23:36:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; YoshiGame           ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ agreement for further details.
 ; Assignment Name                      ; Value                                      ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+--------------------------------------------+---------------+-------------+----------------+
 ; ALLOW_ANY_ROM_SIZE_FOR_RECOGNITION   ; On                                         ; Off           ; --          ; --             ;
-; COMPILER_SIGNATURE_ID                ; 154414180904924.154764505429380            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 154414180904924.154767817317039            ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                  ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                       ; 1 ps                                       ; --            ; --          ; eda_simulation ;
@@ -130,12 +130,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:30     ; 1.0                     ; 1058 MB             ; 00:00:50                           ;
-; Fitter                    ; 00:01:09     ; 1.0                     ; 1177 MB             ; 00:01:23                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 820 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.2                     ; 840 MB              ; 00:00:05                           ;
-; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 1090 MB             ; 00:00:05                           ;
-; Total                     ; 00:01:50     ; --                      ; --                  ; 00:02:24                           ;
+; Analysis & Synthesis      ; 00:00:32     ; 1.0                     ; 1058 MB             ; 00:00:54                           ;
+; Fitter                    ; 00:01:13     ; 1.0                     ; 1178 MB             ; 00:01:27                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 829 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.2                     ; 839 MB              ; 00:00:05                           ;
+; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 1088 MB             ; 00:00:05                           ;
+; Total                     ; 00:01:56     ; --                      ; --                  ; 00:02:32                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

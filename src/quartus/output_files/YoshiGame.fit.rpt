@@ -1,5 +1,5 @@
 Fitter report for YoshiGame
-Wed Jan 16 14:25:54 2019
+Wed Jan 16 23:37:59 2019
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -83,7 +83,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jan 16 14:25:54 2019       ;
+; Fitter Status                      ; Successful - Wed Jan 16 23:37:59 2019       ;
 ; Quartus Prime Version              ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                      ; YoshiGame                                   ;
 ; Top-level Entity Name              ; display_top                                 ;
@@ -713,7 +713,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |MK9_hearts_rom:hearts_rom_unit|               ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 6144        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |display_top|hearts_display:hearts_display_unit|MK9_hearts_rom:hearts_rom_unit                                                                                    ; MK9_hearts_rom            ; work         ;
 ;          |altsyncram:altsyncram_component|           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 6144        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |display_top|hearts_display:hearts_display_unit|MK9_hearts_rom:hearts_rom_unit|altsyncram:altsyncram_component                                                    ; altsyncram                ; work         ;
 ;             |altsyncram_gjd1:auto_generated|         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 6144        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |display_top|hearts_display:hearts_display_unit|MK9_hearts_rom:hearts_rom_unit|altsyncram:altsyncram_component|altsyncram_gjd1:auto_generated                     ; altsyncram_gjd1           ; work         ;
-;    |myvga_sync:vsync_unit|                           ; 48 (48)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 1 (1)             ; 21 (21)          ; |display_top|myvga_sync:vsync_unit                                                                                                                                ; myvga_sync                ; work         ;
+;    |myvgasync:vsync_unit|                            ; 48 (48)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 1 (1)             ; 21 (21)          ; |display_top|myvgasync:vsync_unit                                                                                                                                 ; myvgasync                 ; work         ;
 ;    |platforms:platforms_unit|                        ; 131 (131)   ; 0 (0)                     ; 0 (0)         ; 30720       ; 4    ; 0            ; 0       ; 0         ; 0    ; 0            ; 130 (130)    ; 0 (0)             ; 1 (1)            ; |display_top|platforms:platforms_unit                                                                                                                             ; platforms                 ; work         ;
 ;       |MK9_blocks_rom:blocks_unit|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 24576       ; 3    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |display_top|platforms:platforms_unit|MK9_blocks_rom:blocks_unit                                                                                                  ; MK9_blocks_rom            ; work         ;
 ;          |altsyncram:altsyncram_component|           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 24576       ; 3    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |display_top|platforms:platforms_unit|MK9_blocks_rom:blocks_unit|altsyncram:altsyncram_component                                                                  ; altsyncram                ; work         ;
@@ -817,7 +817,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ghost_crazy:ghost_crazy_unit|LessThan5~3                                    ; LCCOMB_X12_Y4_N30  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
 ; ghost_top:ghost_top_unit|LessThan2~16                                       ; LCCOMB_X10_Y17_N12 ; 26      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
 ; ghost_top:ghost_top_unit|LessThan8~1                                        ; LCCOMB_X30_Y16_N26 ; 25      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; myvga_sync:vsync_unit|h_count_next~0                                        ; LCCOMB_X17_Y12_N20 ; 20      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; myvgasync:vsync_unit|h_count_next~0                                         ; LCCOMB_X17_Y12_N20 ; 20      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
 ; pll:pll1|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ; PLL_1              ; 600     ; Clock                     ; yes    ; Global Clock         ; GCLK3            ; --                        ;
 ; pll:pll1|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[1] ; PLL_1              ; 34      ; Clock                     ; yes    ; Global Clock         ; GCLK4            ; --                        ;
 ; rtl~0                                                                       ; LCCOMB_X9_Y18_N4   ; 20      ; Clock                     ; yes    ; Global Clock         ; GCLK0            ; --                        ;
@@ -4145,14 +4145,14 @@ Info (176353): Automatically promoted node rtl~2
 Info (176353): Automatically promoted node game_state_machine:game_FSM|Selector34~0  File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/original/game_state_machine.v Line: 64
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node myvga_sync:vsync_unit|video_on~1 File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/modified/myvgasync.v Line: 6
-        Info (176357): Destination node myvga_sync:vsync_unit|h_count_next~0 File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/modified/myvgasync.v Line: 28
+        Info (176357): Destination node myvgasync:vsync_unit|video_on~1 File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/modified/myvgasync.v Line: 6
+        Info (176357): Destination node myvgasync:vsync_unit|h_count_next~0 File: /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/modified/myvgasync.v Line: 28
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (128000): Starting physical synthesis optimizations for speed
 Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:01
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:05
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
@@ -4163,8 +4163,8 @@ Info (170193): Fitter routing operations beginning
 Info (170089): 3e+03 ns of routing delay (approximately 11.4% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
 Info (170195): Router estimated average interconnect usage is 17% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 26% of the available device resources in the region that extends from location X23_Y12 to location X34_Y24
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:42
-Info (11888): Total time spent on timing analysis during the Fitter is 5.90 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:45
+Info (11888): Total time spent on timing analysis during the Fitter is 6.09 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -4172,10 +4172,10 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
 Info (144001): Generated suppressed messages file /home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/quartus/output_files/YoshiGame.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1177 megabytes
-    Info: Processing ended: Wed Jan 16 14:25:55 2019
-    Info: Elapsed time: 00:01:10
-    Info: Total CPU time (on all processors): 00:01:25
+    Info: Peak virtual memory: 1178 megabytes
+    Info: Processing ended: Wed Jan 16 23:38:00 2019
+    Info: Elapsed time: 00:01:14
+    Info: Total CPU time (on all processors): 00:01:29
 
 
 +----------------------------+

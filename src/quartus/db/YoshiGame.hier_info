@@ -4,32 +4,32 @@ KEY_START => start.IN1
 KEY_UP => yoshi_up.IN1
 KEY_LEFT => yoshi_left.IN1
 KEY_RIGHT => yoshi_right.IN1
-hsync << myvga_sync:vsync_unit.hsync
-vsync << myvga_sync:vsync_unit.vsync
-rgb[0] << rgb_reg[0].DB_MAX_OUTPUT_PORT_TYPE
-rgb[1] << rgb_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-rgb[2] << rgb_reg[2].DB_MAX_OUTPUT_PORT_TYPE
-rgb[3] << rgb_reg[3].DB_MAX_OUTPUT_PORT_TYPE
-rgb[4] << rgb_reg[4].DB_MAX_OUTPUT_PORT_TYPE
-rgb[5] << rgb_reg[5].DB_MAX_OUTPUT_PORT_TYPE
-rgb[6] << rgb_reg[6].DB_MAX_OUTPUT_PORT_TYPE
-rgb[7] << rgb_reg[7].DB_MAX_OUTPUT_PORT_TYPE
-rgb[8] << rgb_reg[8].DB_MAX_OUTPUT_PORT_TYPE
-rgb[9] << rgb_reg[9].DB_MAX_OUTPUT_PORT_TYPE
-rgb[10] << rgb_reg[10].DB_MAX_OUTPUT_PORT_TYPE
-rgb[11] << rgb_reg[11].DB_MAX_OUTPUT_PORT_TYPE
-sseg[0] << score_display:score_display_unit.sseg
-sseg[1] << score_display:score_display_unit.sseg
-sseg[2] << score_display:score_display_unit.sseg
-sseg[3] << score_display:score_display_unit.sseg
-sseg[4] << score_display:score_display_unit.sseg
-sseg[5] << score_display:score_display_unit.sseg
-sseg[6] << score_display:score_display_unit.sseg
-sseg[7] << score_display:score_display_unit.sseg
-an[0] << score_display:score_display_unit.an
-an[1] << score_display:score_display_unit.an
-an[2] << score_display:score_display_unit.an
-an[3] << score_display:score_display_unit.an
+hsync <= myvgasync:vsync_unit.hsync
+vsync <= myvgasync:vsync_unit.vsync
+rgb[0] <= rgb_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+rgb[1] <= rgb_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+rgb[2] <= rgb_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+rgb[3] <= rgb_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+rgb[4] <= rgb_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+rgb[5] <= rgb_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+rgb[6] <= rgb_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+rgb[7] <= rgb_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+rgb[8] <= rgb_reg[8].DB_MAX_OUTPUT_PORT_TYPE
+rgb[9] <= rgb_reg[9].DB_MAX_OUTPUT_PORT_TYPE
+rgb[10] <= rgb_reg[10].DB_MAX_OUTPUT_PORT_TYPE
+rgb[11] <= rgb_reg[11].DB_MAX_OUTPUT_PORT_TYPE
+sseg[0] <= score_display:score_display_unit.sseg
+sseg[1] <= score_display:score_display_unit.sseg
+sseg[2] <= score_display:score_display_unit.sseg
+sseg[3] <= score_display:score_display_unit.sseg
+sseg[4] <= score_display:score_display_unit.sseg
+sseg[5] <= score_display:score_display_unit.sseg
+sseg[6] <= score_display:score_display_unit.sseg
+sseg[7] <= score_display:score_display_unit.sseg
+an[0] <= score_display:score_display_unit.an
+an[1] <= score_display:score_display_unit.an
+an[2] <= score_display:score_display_unit.an
+an[3] <= score_display:score_display_unit.an
 
 
 |display_top|pll:pll1
@@ -108,7 +108,7 @@ inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
 
 
-|display_top|myvga_sync:vsync_unit
+|display_top|myvgasync:vsync_unit
 clk => hsync_reg.CLK
 clk => vsync_reg.CLK
 clk => h_count_reg[0].CLK
