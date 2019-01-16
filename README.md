@@ -5,7 +5,7 @@ The original project is here: https://github.com/jconenna/Yoshis-Nightmare
 The porting is needed because the original project is developed on Basys 3 development board which uses a Xilinx Artix-7 series FPGA, with 33k logic cells, and 1800 kbits of block RAM (likely a XC7A35T).
 My board is Zr-Tech WXEDA developement board which uses Altera Cyclone IV FPGA (EP4CE6E22C8N), with 6272 LEs, and 276480 memory bits of block RAM, much less powerful than the one used by the original project.
 
-![My FPGA board Zr-Tech WXEDA board](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/doc/images/Zr-Tech_WXEDA_board.png "My FPGA board Zr-Tech WXEDA board")
+![My FPGA board Zr-Tech WXEDA board](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Zr-Tech_WXEDA_board.png "My FPGA board Zr-Tech WXEDA board")
 
 Of course I mapped the I/O PINs which are specific to my developement board.
 
@@ -25,7 +25,7 @@ I did not implemented a gamepad controller, I use the 4 buttons on my board. Fro
 
 YoshiGameConversion.cof is included in Quartus project to convert YoshiGame.sof to YoshiGame.jic (needed to write "permanently" the configuration to the FPGA).
 
-![Quartus Compilation Report](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/doc/images/Compilation_Success.png "Quartus Compilation Report")
+![Quartus Compilation Report](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Compilation_Success.png "Quartus Compilation Report")
 
 Problems
 --------
@@ -34,9 +34,9 @@ Problems
 
 Screenshots
 -----------
-![Game logo](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/doc/images/Screenshot_Game_1.jpg "Game logo")
-![Game started](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/doc/images/Screenshot_Game_2.jpg "Game started")
-![Game playing and score](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/doc/images/Screenshot_Game_3.jpg "Game playing and score")
-![Game hit](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/doc/images/Screenshot_Game_4.jpg "Game hit")
-![Game over](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/doc/images/Screenshot_Game_5.jpg "Game over")
-![Board playing score](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/doc/images/Board_Playing_Score.jpg "Board playing score")
+![Game logo](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Screenshot_Game_1.jpg "Game logo")
+![Game started](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Screenshot_Game_2.jpg "Game started")
+![Game playing and score](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Screenshot_Game_3.jpg "Game playing and score")
+![Game hit](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Screenshot_Game_4.jpg "Game hit")
+![Game over](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Screenshot_Game_5.jpg "Game over")
+![Board playing score](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Board_Playing_Score.jpg "Board playing score")
