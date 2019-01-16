@@ -232,7 +232,9 @@ module eggs
    
     // infer egg sprites rom
     //eggs_rom eggs_rom_unit(.clk(clk), .row(row), .col(col), .color_data(rgb_out));
+`ifndef ICARUS_SIMULATOR
 	 MK9_eggs_rom eggs_rom_unit(.clock(clk), .address({row,col}), .q(rgb_out));
+`endif
    
     // signal asserted when x/y vga pixel values are within sprite in current location
     assign eggs_on = (x >= egg_x_reg && x < egg_x_reg + 16 && y >= egg_y_reg && y < egg_y_reg + 16)

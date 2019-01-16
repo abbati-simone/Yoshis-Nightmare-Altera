@@ -488,12 +488,18 @@ module yoshi_sprite
     wire [11:0] color_data_yoshi, color_data_yoshi_ghost;
    
     // instantiate yoshi ROM circuit
-    //yoshi_rom yoshi_rom_unit (.clk(clk), .row(row), .col(col), .color_data(color_data_yoshi));
+`ifndef ICARUS_SIMULATOR
 	 MK9_yoshi_rom yoshi_rom_unit (.clock(clk), .address({row,col}), .q(color_data_yoshi));
+`else
+	yoshi_rom yoshi_rom_unit (.clk(clk), .row(row), .col(col), .color_data(color_data_yoshi));
+`endif
 	
     // instantiate yoshi ghost ROM circuit
-    //yoshi_ghost_rom yoshi_ghost_rom_unit (.clk(clk), .row(row), .col(col), .color_data(color_data_yoshi_ghost));
+`ifndef ICARUS_SIMULATOR
 	 MK9_yoshi_ghost_rom yoshi_ghost_rom_unit (.clock(clk), .address({row,col}), .q(color_data_yoshi_ghost));
+`else
+	yoshi_ghost_rom yoshi_ghost_rom_unit (.clk(clk), .row(row), .col(col), .color_data(color_data_yoshi_ghost));
+`endif
 	
     // vector to signal when vga_sync pixel is within head or torso tile (see diagram)
     wire head_on, torso_on;

@@ -88,8 +88,11 @@ module score_display
 	wire color_data;
 	
 	// infer number bitmap rom
-	//numbers_rom numbers_rom_unit(.clk(clk), .row(row), .col(col), .color_data(color_data));
+`ifndef ICARUS_SIMULATOR
 	MK9_numbers_rom numbers_rom_unit(.clock(clk), .address({row,col}), .q(color_data));
+`else
+	numbers_rom numbers_rom_unit(.clk(clk), .row(row), .col(col), .color_data(color_data));
+`endif
 	
 	// display 4 digits on screen
 	always @* 

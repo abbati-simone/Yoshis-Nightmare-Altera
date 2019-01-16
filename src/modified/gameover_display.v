@@ -16,7 +16,10 @@ module gameover_display
 	assign gameover_on = (x >= 282 && x < 360 && y >= 72 && y < 86 && rgb_out != 12'b011011011110) ? 1 : 0;
 	
 	// instantiate game_logo_rom
-	//gameover_rom gameover_rom_unit (.clk(clk), .row(row), .col(col), .color_data(rgb_out));
+`ifndef ICARUS_SIMULATOR
 	MK9_gameover_rom gameover_rom_unit (.clock(clk), .address({row,col}), .q(rgb_out));
+`else
+	gameover_rom gameover_rom_unit (.clk(clk), .row(row), .col(col), .color_data(rgb_out));
+`endif
 
 endmodule

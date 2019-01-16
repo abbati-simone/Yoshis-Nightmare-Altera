@@ -14,10 +14,18 @@ module platforms
 	wire [11:0] walls_color_data, blocks_color_data;
 	
 	//walls_rom walls_unit (.clk(clk), .row(row[4:0]), .col(col), .color_data(walls_color_data));
+`ifndef ICARUS_SIMULATOR
 	MK9_walls_rom walls_unit (.clock(clk), .address({row,col}), .q(walls_color_data));
+`else
+	walls_rom walls_unit (.clk(clk), .row(row[4:0]), .col(col), .color_data(walls_color_data));
+`endif
 	
     	//blocks_rom blocks_unit (.clk(clk), .row(row), .col(col), .color_data(blocks_color_data));
+`ifndef ICARUS_SIMULATOR
 		MK9_blocks_rom blocks_unit (.clock(clk), .address({row,col}), .q(blocks_color_data));
+`else
+		blocks_rom blocks_unit (.clk(clk), .row(row), .col(col), .color_data(blocks_color_data));
+`endif
 	
     	localparam offset = 16; // determines block tiles used
 	

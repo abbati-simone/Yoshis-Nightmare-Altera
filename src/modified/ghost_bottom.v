@@ -154,8 +154,11 @@ module ghost_bottom
     wire [11:0] color_data;
 	
     // infer sprite rom
-    //ghost_normal_rom ghost_normal_unit (.clk(clk), .row(row), .col(col), .color_data(color_data));
-	 MK9_ghost_normal_rom ghost_normal_unit (.clock(clk), .address({row,col}), .q(color_data));
+`ifndef ICARUS_SIMULATOR
+	MK9_ghost_normal_rom ghost_normal_unit (.clock(clk), .address({row,col}), .q(color_data));
+`else
+	ghost_normal_rom ghost_normal_unit (.clk(clk), .row(row), .col(col), .color_data(color_data));
+`endif
 
    
     // signal asserted when x/y vga pixel values are within sprite in current location

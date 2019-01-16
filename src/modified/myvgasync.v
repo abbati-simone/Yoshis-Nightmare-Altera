@@ -1,4 +1,4 @@
-module myvga_sync
+module myvgasync
 
 	(
 		input wire clk,

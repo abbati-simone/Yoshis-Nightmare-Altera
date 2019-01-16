@@ -62,8 +62,9 @@ module display_top
 	wire vgaclk;
 	
 	// *** instantiate sub modules ***
-	
+`ifndef ICARUS_SIMULATOR
 	pll pll1(.inclk0(clk48), .c0(clk), .c1(vgaclk));
+`endif
 	
 	wire [7:0] ssegp;
 	assign sseg[7:0] = ~ssegp[7:0];
@@ -72,10 +73,12 @@ module display_top
 	assign right = ~KEY_RIGHT;
 	assign up = ~KEY_UP;
 	wire hard_reset;
+`ifndef ICARUS_SIMULATOR
 	assign hard_reset = 0;
+`endif
 	
 	// instantiate vga_sync circuit
-	myvga_sync vsync_unit (.clk(vgaclk), .reset(reset), .hsync(hsync), .vsync(vsync),
+	myvgasync vsync_unit (.clk(vgaclk), .reset(reset), .hsync(hsync), .vsync(vsync),
                              .video_on(video_on), .x(x), .y(y));
 
 	// instantiate nes controller

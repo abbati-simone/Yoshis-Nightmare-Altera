@@ -12,8 +12,11 @@ module hearts_display
 	reg [3:0] col;
 	
 	// infer hearts rom 
-	//hearts_rom hearts_rom_unit(.clk(clk), .row(row), .col(col), .color_data(color_data));
+`ifndef ICARUS_SIMULATOR
 	MK9_hearts_rom hearts_rom_unit(.clock(clk), .address({row,col}), .q(color_data));
+`else
+	hearts_rom hearts_rom_unit(.clk(clk), .row(row), .col(col), .color_data(color_data));
+`endif
 	
 	// based on x/y set row/col indexes for hearts_rom, assert hearts_on when color_data from rom isn't sprite background color,
 	always @* 

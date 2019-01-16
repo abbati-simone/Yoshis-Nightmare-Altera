@@ -149,8 +149,11 @@ module ghost_crazy
     wire [11:0] color_data;
 	
     // infer sprite rom
-    //ghost_crazy_rom ghost_crazy_unit (.clk(clk), .row(row), .col(col), .color_data(color_data));
-	 MK9_ghost_crazy_rom ghost_crazy_unit (.clock(clk), .address({row,col}), .q(color_data));
+`ifndef ICARUS_SIMULATOR
+	MK9_ghost_crazy_rom ghost_crazy_unit (.clock(clk), .address({row,col}), .q(color_data));
+`else
+	ghost_crazy_rom ghost_crazy_unit (.clk(clk), .row(row), .col(col), .color_data(color_data));
+`endif
    
     // signal asserted when x/y VGA pixel values are within sprite in current location
     wire ghost_on;
