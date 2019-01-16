@@ -1,8 +1,8 @@
 `timescale 1ns/100ps
-module pll(input wire inclk0, output wire c0, output wire c1);
+/*module pll(input wire inclk0, output wire c0, output wire c1);
 	//assign c0 = inclk0;
 	//assign c1 = #4 ~inclk0;
-endmodule
+endmodule*/
 
 module yoshi_tb;
 reg clk;
@@ -10,32 +10,38 @@ reg vgaclk;
 reg reset;
 reg start, up;
 wire [11:0] pixel;
-integer file, r;
+integer fifo_file, r;
+reg [8*2048:1] fifo_name;
+reg res;
 
 initial begin
 //$dumpfile ( "yoshi.vcd" );
 //$dumpvars ;
-file = $fopen("/home/abbakus/fifo", "wb"); // For writing
-//filec = $fopen("/home/abbakus/fifoc", "wb"); // For writing
-//$display("File descriptor %d", file);
-//$display("File descriptor %d", filec);
+res = $value$plusargs("fifo=%s", fifo_name);
+$display("Opening FIFO location %0s for writing", fifo_name);
+$display("(you may need to open it for reading on the other side to unlock this operation)...");
+fifo_file = $fopen(fifo_name, "wb"); // For writing
+$display("FIFO opened for writing binary");
+//$display("FIFO File descriptor %d", fifo_file);
 end
 
 display_top T
 	(
-		//.clk48(clk),  // clock signal, reset signal from switch
-		.hard_reset(reset),
-		//output wire hsync, vsync,    // outputs VGA signals to VGA port
-		.rgb(pixel),      // output rgb signals to VGA DAC
-		//output wire [7:0] sseg,      // output signals to control led digit segments
-		//output wire [3:0] an			// output signals to multiplex seven-segment display
+		//.hard_reset(reset),
+		.rgb(pixel),
 		.KEY_START(start),
 		.KEY_UP(up)
 		);
 
 assign T.vgaclk = vgaclk;
 assign T.clk = clk;
-//assign T.game_reset = reset;
+assign T.hard_reset = reset;
+//assign T.start = start;
+
+//initial begin
+//$display("Loading rom.");
+//$readmemh("hex_memory_file.mem", T.platforms_unit.walls_color_data); //, [start_address], [end_address]
+//end
 
 initial begin
 reset = 0;
@@ -61,12 +67,13 @@ always@(posedge vgaclk)
 begin
 if(T.video_on)
 begin
+	//$write("."); 
 	//r = $fputc({pixel[11:8], 4'b0}, file);
 	//r = $fputc({pixel[7:4], 4'b0}, file);
 	//r = $fputc({pixel[3:0], 4'b0}, file);
 	//$fwrite(file, "%u%u%u",{pixel[15:11], 3'b0},{pixel[10:5], 2'b0},{pixel[4:0], 3'b0});
-	r = $fputc({4'b0, pixel[11:8]}, file);
-	r = $fputc(pixel[7:0], file);
+	r = $fputc({4'b0, pixel[11:8]}, fifo_file);
+	r = $fputc(pixel[7:0], fifo_file);
 end
 end
 
