@@ -40,3 +40,44 @@ Screenshots
 ![Game hit](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Screenshot_Game_4.jpg "Game hit")
 ![Game over](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Screenshot_Game_5.jpg "Game over")
 ![Board playing score](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Board_Playing_Score.jpg "Board playing score")
+
+Icarus Verilog Simulation and VGA output capture
+------------------------------------------------
+Developing this project and not having (at the time) a CRT/LCD Monitor with VGA input, I developed a little program call **VirtualScreenGTK** to show an image starting from a "bitstream" (RGB data sequence) and I used Icarus Verilog Simulation tool to get the RGB output and "render" an image. More information about **VirtualScreenGTK** can be found here https://github.com/abbati-simone/VirtualScreenGTK
+
+Under *src/testbench* are some files for simulation:
+ * *compilesim.sh* is used to compile the testbench with *iverilog*
+ * *runsim.sh* is used to run the simulation with *vvp*
+ * *YoshiGame_tb.v* is the testbech main file
+ * *yoshisim.out* is the compiled Icarus file to be run with *vvp*
+
+To compile the testbech run:
+```bash
+$ ./compilesim.sh
+```
+*yoshisim.out* is created/updated.
+
+To run simulation:
+```bash
+$ ./runsim.sh
+```
+
+Notice you will need virtualScreenGtk on your PATH (see VirtualScreenGTK project linked above).
+A FIFO file is created under your home and is named yoshi_fifo. This FIFO is removed when the simulation end but may not work, so check and remove it manually if needed (rm ${HOME}/yoshi_fifo).
+
+
+The following screenshot is captured when the first frame "rendering" is not finished:
+
+![VirtualScreenGTK frame unfinished](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/VirtualScreenGTK_1.png "VirtualScreenGTK frame unfinished")
+
+The following screenshot is captured when the first frame "rendering" is finished and the next one just started:
+
+![VirtualScreenGTK second frame](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/VirtualScreenGTK_2.png "VirtualScreenGTK second frame")
+
+The following screenshot is captured using the specific command line option:
+
+![VirtualScreenGTK command line screenshot](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/VirtualScreenGTK_3.jpg "VirtualScreenGTK command line screenshot")
+
+
+The "rendering" is super slow but can be useful to capture a clean screenshot.
+
