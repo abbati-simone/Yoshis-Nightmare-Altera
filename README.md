@@ -7,8 +7,12 @@ My board is Zr-Tech WXEDA developement board which uses Altera Cyclone IV FPGA (
 
 ![My FPGA board Zr-Tech WXEDA board](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Zr-Tech_WXEDA_board.png "My FPGA board Zr-Tech WXEDA board")
 
-Of course I mapped the I/O PINs which are specific to my developement board. I also added a music during the init screen and another one during game play. Maybe I will add a game over music and a sound when Yoshi is hit. The music is converted from **MIDI** files to ROMs and played via two specific Verilog modules (*delay_unit* and *playnote*). Check these projects to have more information about music:
+Of course I mapped the I/O PINs which are specific to my developement board. I also added a music during the init screen and another one during game play. Maybe I will add a game over music and a sound when Yoshi is hit. The music is converted from **MIDI** files to ROMs and played via two specific Verilog modules (*delay_unit* and *playnote*).
+
+Check these projects to have more information about music:
+
 https://github.com/abbati-simone/Midi-to-ROM
+
 https://github.com/abbati-simone/Midi-Altera
 
 The main problem was the ROM synthesis. Reading Altera documentation a simple keyword (**(\* romstyle = "M9K" \*)**) on the source file would suffice to force compilation to use the internal block memory, but it does not work for me. Loading ROM data from MIF file using the IP for internal memory works instead.
