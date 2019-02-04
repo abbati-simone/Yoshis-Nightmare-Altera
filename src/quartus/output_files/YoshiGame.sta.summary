@@ -3,59 +3,107 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -12.600
-TNS   : -1394.139
+Slack : -12.040
+TNS   : -1388.539
 
 Type  : Slow 1200mV 85C Model Setup 'eggs:eggs_unit|score_reg[10]'
-Slack : -10.646
-TNS   : -609.933
+Slack : -10.347
+TNS   : -582.087
+
+Type  : Slow 1200mV 85C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[4]'
+Slack : -8.332
+TNS   : -283.399
+
+Type  : Slow 1200mV 85C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : -7.814
+TNS   : -236.941
+
+Type  : Slow 1200mV 85C Model Setup 'music_Yoshi_playing:music_Playing|delay_unit:delay_unit[0].du|waiting'
+Slack : -7.013
+TNS   : -151.322
+
+Type  : Slow 1200mV 85C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -6.670
+TNS   : -242.241
+
+Type  : Slow 1200mV 85C Model Setup 'music_Yoshi_main_theme:music_Main_Theme|delay_unit:delay_unit[0].du|waiting'
+Slack : -4.594
+TNS   : -104.064
 
 Type  : Slow 1200mV 85C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : -1.793
-TNS   : -16.412
+Slack : -0.031
+TNS   : -0.031
 
 Type  : Slow 1200mV 85C Model Hold 'eggs:eggs_unit|score_reg[10]'
-Slack : -3.739
-TNS   : -14.973
+Slack : -2.927
+TNS   : -11.708
 
 Type  : Slow 1200mV 85C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[0]'
 Slack : 0.431
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 0.453
+TNS   : 0.000
+
 Type  : Slow 1200mV 85C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 0.464
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'music_Yoshi_playing:music_Playing|delay_unit:delay_unit[0].du|waiting'
+Slack : 0.519
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 0.723
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.725
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'music_Yoshi_main_theme:music_Main_Theme|delay_unit:delay_unit[0].du|waiting'
+Slack : 0.772
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'eggs:eggs_unit|score_reg[10]'
-Slack : -8.413
-TNS   : -493.839
-
-Type  : Slow 1200mV 85C Model Recovery 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : -3.919
-TNS   : -84.674
+Slack : -9.284
+TNS   : -513.317
 
 Type  : Slow 1200mV 85C Model Recovery 'pll1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -3.832
-TNS   : -1746.968
+Slack : -4.548
+TNS   : -16.613
+
+Type  : Slow 1200mV 85C Model Recovery 'pll1|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 2.187
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'eggs:eggs_unit|score_reg[10]'
-Slack : 0.860
+Slack : 1.301
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 11.101
+Slack : 4.610
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'pll1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 11.225
+Slack : 4.719
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'eggs:eggs_unit|score_reg[10]'
-Slack : -4.744
-TNS   : -2351.243
+Slack : -4.253
+TNS   : -2271.854
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'music_Yoshi_playing:music_Playing|delay_unit:delay_unit[0].du|waiting'
+Slack : -3.201
+TNS   : -84.611
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'music_Yoshi_main_theme:music_Main_Theme|delay_unit:delay_unit[0].du|waiting'
+Slack : -3.201
+TNS   : -76.722
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.696
+Slack : 4.694
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk48'
@@ -63,63 +111,123 @@ Slack : 10.351
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 19.698
+Slack : 19.697
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 49.687
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 371.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 833.025
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -11.635
-TNS   : -1255.473
+Slack : -11.012
+TNS   : -1260.951
 
 Type  : Slow 1200mV 0C Model Setup 'eggs:eggs_unit|score_reg[10]'
-Slack : -10.344
-TNS   : -595.229
+Slack : -10.225
+TNS   : -571.588
+
+Type  : Slow 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[4]'
+Slack : -7.402
+TNS   : -251.074
+
+Type  : Slow 1200mV 0C Model Setup 'music_Yoshi_playing:music_Playing|delay_unit:delay_unit[0].du|waiting'
+Slack : -7.018
+TNS   : -145.510
+
+Type  : Slow 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : -7.001
+TNS   : -211.064
+
+Type  : Slow 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -5.959
+TNS   : -216.406
+
+Type  : Slow 1200mV 0C Model Setup 'music_Yoshi_main_theme:music_Main_Theme|delay_unit:delay_unit[0].du|waiting'
+Slack : -4.733
+TNS   : -99.973
 
 Type  : Slow 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : -1.047
-TNS   : -7.988
+Slack : 0.552
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'eggs:eggs_unit|score_reg[10]'
-Slack : -3.458
-TNS   : -14.370
+Slack : -2.727
+TNS   : -10.908
 
 Type  : Slow 1200mV 0C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[0]'
 Slack : 0.380
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 0.401
+TNS   : 0.000
+
 Type  : Slow 1200mV 0C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 0.415
+Slack : 0.417
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'music_Yoshi_playing:music_Playing|delay_unit:delay_unit[0].du|waiting'
+Slack : 0.481
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'music_Yoshi_main_theme:music_Main_Theme|delay_unit:delay_unit[0].du|waiting'
+Slack : 0.668
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 0.671
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.676
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'eggs:eggs_unit|score_reg[10]'
-Slack : -8.143
-TNS   : -477.582
-
-Type  : Slow 1200mV 0C Model Recovery 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : -3.169
-TNS   : -68.257
+Slack : -9.194
+TNS   : -508.834
 
 Type  : Slow 1200mV 0C Model Recovery 'pll1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -3.093
-TNS   : -1400.954
+Slack : -3.974
+TNS   : -14.265
+
+Type  : Slow 1200mV 0C Model Recovery 'pll1|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 2.559
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'eggs:eggs_unit|score_reg[10]'
-Slack : 0.841
+Slack : 1.030
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 10.257
+Slack : 4.186
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'pll1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 10.369
+Slack : 4.284
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'eggs:eggs_unit|score_reg[10]'
-Slack : -4.558
-TNS   : -2118.742
+Slack : -3.957
+TNS   : -2057.299
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'music_Yoshi_playing:music_Playing|delay_unit:delay_unit[0].du|waiting'
+Slack : -3.201
+TNS   : -84.611
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'music_Yoshi_main_theme:music_Main_Theme|delay_unit:delay_unit[0].du|waiting'
+Slack : -3.201
+TNS   : -76.722
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.663
+Slack : 4.662
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk48'
@@ -130,57 +238,117 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll1|altpll_component|auto_gen
 Slack : 19.660
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -5.474
-TNS   : -603.314
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 49.665
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 371.326
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 832.995
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'eggs:eggs_unit|score_reg[10]'
-Slack : -5.420
-TNS   : -294.602
+Slack : -5.407
+TNS   : -283.099
+
+Type  : Fast 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.334
+TNS   : -605.295
+
+Type  : Fast 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[4]'
+Slack : -3.204
+TNS   : -109.285
+
+Type  : Fast 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -3.173
+TNS   : -117.801
+
+Type  : Fast 1200mV 0C Model Setup 'music_Yoshi_playing:music_Playing|delay_unit:delay_unit[0].du|waiting'
+Slack : -2.991
+TNS   : -50.246
+
+Type  : Fast 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : -2.985
+TNS   : -90.000
+
+Type  : Fast 1200mV 0C Model Setup 'music_Yoshi_main_theme:music_Main_Theme|delay_unit:delay_unit[0].du|waiting'
+Slack : -1.970
+TNS   : -31.056
 
 Type  : Fast 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 4.714
+Slack : 5.457
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'eggs:eggs_unit|score_reg[10]'
-Slack : -1.245
-TNS   : -4.977
+Slack : -0.889
+TNS   : -3.555
 
 Type  : Fast 1200mV 0C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[0]'
 Slack : 0.178
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 0.187
+TNS   : 0.000
+
 Type  : Fast 1200mV 0C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 0.193
+Slack : 0.194
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'music_Yoshi_playing:music_Playing|delay_unit:delay_unit[0].du|waiting'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 0.288
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'music_Yoshi_main_theme:music_Main_Theme|delay_unit:delay_unit[0].du|waiting'
+Slack : 0.307
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'eggs:eggs_unit|score_reg[10]'
-Slack : -4.289
-TNS   : -252.618
-
-Type  : Fast 1200mV 0C Model Recovery 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 3.331
-TNS   : 0.000
+Slack : -4.568
+TNS   : -252.933
 
 Type  : Fast 1200mV 0C Model Recovery 'pll1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 3.370
+Slack : 3.272
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'pll1|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 6.349
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'eggs:eggs_unit|score_reg[10]'
-Slack : 0.821
+Slack : 0.811
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'pll1|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 5.262
+Slack : 2.036
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'pll1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 5.334
+Slack : 2.101
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'eggs:eggs_unit|score_reg[10]'
-Slack : -1.814
-TNS   : -827.309
+Slack : -1.528
+TNS   : -772.636
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'music_Yoshi_playing:music_Playing|delay_unit:delay_unit[0].du|waiting'
+Slack : -1.000
+TNS   : -35.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'music_Yoshi_main_theme:music_Main_Theme|delay_unit:delay_unit[0].du|waiting'
+Slack : -1.000
+TNS   : -32.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[0]'
 Slack : 4.732
@@ -192,6 +360,18 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[1]'
 Slack : 19.769
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 49.776
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 371.430
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 833.093
 TNS   : 0.000
 
 ------------------------------------------------------------

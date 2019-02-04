@@ -106,6 +106,23 @@ set_location_assignment PIN_142 -to sseg[2] -comment E
 set_location_assignment PIN_143 -to sseg[6] -comment A
 set_location_assignment PIN_3 -to sseg[7] -comment DP
 set_location_assignment PIN_135 -to an[1]
+set_global_assignment -name SEARCH_PATH ../quartus
+set_location_assignment PIN_85 -to SPEAKER
+set_global_assignment -name QIP_FILE ../modified/PLLs/pll.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_yoshi_rom.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_yoshi_ghost_rom.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_walls_rom.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_numbers_rom.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_hearts_rom.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_ghost_normal_rom.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_ghost_crazy_rom.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_gameover_rom.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_game_logo_small_rom.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_game_logo_small_2_rom.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_game_logo_rom.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_eggs_rom.qip
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_blocks_rom.qip
+set_global_assignment -name VERILOG_FILE ../modified/music.v
 set_global_assignment -name VERILOG_FILE ../modified/myvgasync.v
 set_global_assignment -name VERILOG_FILE ../modified/platforms.v
 set_global_assignment -name VERILOG_FILE ../modified/score_display.v
@@ -122,19 +139,10 @@ set_global_assignment -name VERILOG_FILE ../original/grounded.v
 set_global_assignment -name VERILOG_FILE ../original/game_state_machine.v
 set_global_assignment -name VERILOG_FILE ../original/enemy_collision.v
 set_global_assignment -name VERILOG_FILE ../original/binary2bcd.v
-set_global_assignment -name QIP_FILE ../modified/pll.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_yoshi_rom.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_yoshi_ghost_rom.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_walls_rom.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_numbers_rom.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_hearts_rom.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_ghost_normal_rom.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_ghost_crazy_rom.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_gameover_rom.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_game_logo_small_rom.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_game_logo_small_2_rom.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_game_logo_rom.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_eggs_rom.qip
-set_global_assignment -name QIP_FILE ../modified/MK9_blocks_rom.qip
-set_global_assignment -name SEARCH_PATH ../quartus
+set_global_assignment -name VERILOG_FILE ../modified/playnote.v
+set_global_assignment -name VERILOG_FILE ../modified/delay_unit.v
+set_global_assignment -name VERILOG_FILE ../modified/music_Yoshi_main_theme.v
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_Yoshi0_rom.qip
+set_global_assignment -name VERILOG_FILE ../modified/music_Yoshi_playing.v
+set_global_assignment -name QIP_FILE ../modified/ROMs/MK9_Yoshi2_rom.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

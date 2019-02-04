@@ -104,6 +104,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "SPEAKER",
+					"strict" : false
+				},
+				{
 					"name" : "KEY_START",
 					"strict" : false
 				},

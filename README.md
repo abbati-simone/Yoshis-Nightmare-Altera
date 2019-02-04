@@ -7,7 +7,9 @@ My board is Zr-Tech WXEDA developement board which uses Altera Cyclone IV FPGA (
 
 ![My FPGA board Zr-Tech WXEDA board](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Zr-Tech_WXEDA_board.png "My FPGA board Zr-Tech WXEDA board")
 
-Of course I mapped the I/O PINs which are specific to my developement board.
+Of course I mapped the I/O PINs which are specific to my developement board. I also added a music during the init screen and another one during game play. Maybe I will add a game over music and a sound when Yoshi is hit. The music is converted from **MIDI** files to ROMs and played via two specific Verilog modules (*delay_unit* and *playnote*). Check these projects to have more information about music:
+https://github.com/abbati-simone/Midi-to-ROM
+https://github.com/abbati-simone/Midi-Altera
 
 The main problem was the ROM synthesis. Reading Altera documentation a simple keyword (**(\* romstyle = "M9K" \*)**) on the source file would suffice to force compilation to use the internal block memory, but it does not work for me. Loading ROM data from MIF file using the IP for internal memory works instead.
 Not using internal memory causes insufficient space on EP4CE6E22C8N. So I used the IP provided with Quartus to make use of the internal memory. Unfortunately the original ROM data is in the form of a Verilog source (with *case* statement), but Quartus does not accept it as source to load the ROM data. This is why I developed two **Python3** scripts to do this Job: convert a Verilog file with ROM data to Quartus MIF file (Memory Initialization file). These scripts can also be useful for many other purposes (copied in this project from this project: https://github.com/abbati-simone/Png-to-from-Verilog).
@@ -25,7 +27,14 @@ I did not implemented a gamepad controller, I use the 4 buttons on my board. Fro
 
 YoshiGameConversion.cof is included in Quartus project to convert YoshiGame.sof to YoshiGame.jic (needed to write "permanently" the configuration to the FPGA).
 
+Compilation Reports
+-------------------
+Without music
 ![Quartus Compilation Report](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Compilation_Success.png "Quartus Compilation Report")
+
+
+With music
+![Quartus Compilation Report Music](https://github.com/abbati-simone/Yoshis-Nightmare-Altera/blob/master/doc/images/Compilation_Success_Music.png "Quartus Compilation Report Music")
 
 Problems
 --------

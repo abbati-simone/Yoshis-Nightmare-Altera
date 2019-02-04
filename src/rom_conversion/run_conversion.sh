@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Images
 ./ROM2Png.py -i verilog/yoshi_rom.v -o png/yoshi_rom.png -f verilog -b 444 -x 16 -y 80
 ./ROM2Png.py -i verilog/yoshi_ghost_rom.v -o png/yoshi_gost_rom.png -f verilog -b 444 -x 16 -y 80
 ./ROM2Png.py -i verilog/eggs_rom.v -o png/eggs_rom.png -f verilog -b 444 -x 16 -y 80
@@ -27,3 +28,15 @@
 
 ./Png2ROM.py -i png/game_logo_rom_small_2.png -o mif/game_logo_rom_small_2.mif -f quartus -b 444 -k
 
+#Music
+#Yoshi title
+./Midi2ROM.py -f verilog -i midi/Yoshi_Title.mid -o verilog/ -p parameters/ -b 120 -n 1 -r Yoshi -t2
+./Midi2ROM.py -f quartus -i midi/Yoshi_Title.mid -o mif/ -p parameters/ -b 120 -n 1 -r Yoshi -t2
+
+#Yoshi play
+./Midi2ROM.py -f verilog -i midi/Yoshi_Play.mid -o verilog/ -p parameters/ -b 84 -n 1 -r Yoshi2 -t1
+./Midi2ROM.py -f quartus -i midi/Yoshi_Play.mid -o mif/ -p parameters/ -b 84 -n 1 -r Yoshi2 -t1
+
+#Mario theme
+./Midi2ROM.py -f verilog -i midi/Mario-Sheet-Music-Overworld-Main-Theme.mid -o verilog/ -p parameters/ -b 400 -n 1 -r Mario
+./Midi2ROM.py -f quartus -i midi/Mario-Sheet-Music-Overworld-Main-Theme.mid -o mif/ -p parameters/ -b 400 -n 1 -r Mario

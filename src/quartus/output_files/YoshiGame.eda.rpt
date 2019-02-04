@@ -1,5 +1,5 @@
 EDA Netlist Writer report for YoshiGame
-Wed Jan 16 23:38:14 2019
+Mon Feb  4 14:12:38 2019
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Jan 16 23:38:14 2019 ;
+; EDA Netlist Writer Status ; Successful - Mon Feb  4 14:12:38 2019 ;
 ; Revision Name             ; YoshiGame                             ;
 ; Top-level Entity Name     ; display_top                           ;
 ; Family                    ; Cyclone IV E                          ;
@@ -89,7 +89,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Wed Jan 16 23:38:09 2019
+    Info: Processing started: Mon Feb  4 14:12:32 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off YoshiGame -c YoshiGame
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file YoshiGame_8_1200mv_85c_slow.vo in folder "/home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/quartus/simulation/modelsim/" for EDA simulation tool
@@ -101,9 +101,9 @@ Info (204019): Generated file YoshiGame_8_1200mv_0c_v_slow.sdo in folder "/home/
 Info (204019): Generated file YoshiGame_min_1200mv_0c_v_fast.sdo in folder "/home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/quartus/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file YoshiGame_v.sdo in folder "/home/abbakus/2ndhome/abbakus/Develop/src/Yoshi-Nightmare-Altera/src/quartus/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1088 megabytes
-    Info: Processing ended: Wed Jan 16 23:38:14 2019
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 1094 megabytes
+    Info: Processing ended: Mon Feb  4 14:12:38 2019
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:05
 
 

@@ -11,32 +11,35 @@ module display_top
 		output wire hsync, vsync,    // outputs VGA signals to VGA port
 		output wire [11:0] rgb,      // output rgb signals to VGA DAC
 		output wire [7:0] sseg,      // output signals to control led digit segments
-		output wire [3:0] an         // output signals to multiplex seven-segment display
+		output wire [3:0] an,        // output signals to multiplex seven-segment display
+		output wire SPEAKER
 	);
 	
 	// *** routing signals and registers ***
 	
-   wire up, left, right, start;                                  // route nes controller outputs to sprite circuit
-	localparam idle = 3'b001;                                     // symbolic state constant representing game state idle
-	localparam gameover = 3'b100;                                 // symbolic state constant representing game state gameover
-	wire [1:0] num_hearts;                                        // route signal conveying number of hearts yoshi has, and to display
-	wire [2:0] game_state;                                        // route current game state from game_state_machine
-	wire game_en;                                                 // route signal conveying is game is enabled (playing mode)
-	wire game_reset;                                              // route signal to trigger reset in other modules from inside game_state_machine
-    	wire reset;                                                // reset signal
-	assign reset = game_reset || hard_reset;      				  // assert reset when either hard_reset or game_reset are asserted
-	wire [9:0] x, y;                                              // location of VGA pixel
-	wire video_on, pixel_tick;                                    // route VGA signals
-	reg [11:0] rgb_reg, rgb_next;                                 // RGB data register to route out to VGA DAC
-	wire [9:0] y_x, y_y;                                          // vector to route yoshi's x/y location
-	wire [9:0] g_c_x, g_c_y;                                      // vector to route ghost_crazy's x/y location
-	wire [9:0] g_t_x, g_t_y;                                      // vector to route ghost_top's x/y location
-	wire [9:0] g_b_x, g_b_y;                                      // vector to route ghost_bottom's x/y location
-	wire grounded, jumping_up, direction;                         // signals to route status signals for yoshi
-	wire collision;                                               // signal asserted from enemy_collision
-	wire [13:0] score;                                            // route score value from eggs to score_display
-	wire new_score;                                               // signal asserted for new score, used to start binary to bcd conversion
-	wire [11:0] yoshi_rgb, platforms_rgb, ghost_crazy_rgb,        // RGB regs for various sprite units, to route RGB data to VGA circuit
+   wire up, left, right, start;												// route nes controller outputs to sprite circuit
+	localparam idle = 3'b001;													// symbolic state constant representing game state idle
+	localparam gameover = 3'b100;												// symbolic state constant representing game state gameover
+	localparam playing  = 3'b010;												// symbolic state constant representing game state playing
+	localparam hit      = 3'b011;												// symbolic state constant representing game state hit
+	wire [1:0] num_hearts;														// route signal conveying number of hearts yoshi has, and to display
+	wire [2:0] game_state;														// route current game state from game_state_machine
+	wire game_en;																	// route signal conveying is game is enabled (playing mode)
+	wire game_reset;																// route signal to trigger reset in other modules from inside game_state_machine
+   wire reset;																		// reset signal
+	assign reset = game_reset || hard_reset;								// assert reset when either hard_reset or game_reset are asserted
+	wire [9:0] x, y;																// location of VGA pixel
+	wire video_on, pixel_tick;													// route VGA signals
+	reg [11:0] rgb_reg, rgb_next;												// RGB data register to route out to VGA DAC
+	wire [9:0] y_x, y_y;															// vector to route yoshi's x/y location
+	wire [9:0] g_c_x, g_c_y;													// vector to route ghost_crazy's x/y location
+	wire [9:0] g_t_x, g_t_y;													// vector to route ghost_top's x/y location
+	wire [9:0] g_b_x, g_b_y;													// vector to route ghost_bottom's x/y location
+	wire grounded, jumping_up, direction;									// signals to route status signals for yoshi
+	wire collision;																// signal asserted from enemy_collision
+	wire [13:0] score;															// route score value from eggs to score_display
+	wire new_score;																// signal asserted for new score, used to start binary to bcd conversion
+	wire [11:0] yoshi_rgb, platforms_rgb, ghost_crazy_rgb,			// RGB regs for various sprite units, to route RGB data to VGA circuit
 				 ghost_bottom_rgb, ghost_top_rgb, bg_rgb,
 				 eggs_rgb, hearts_rgb, game_logo_rgb,
 				 gameover_rgb;
@@ -60,10 +63,18 @@ module display_top
 	
 	wire clk;
 	wire vgaclk;
+	wire clk10Mhz;
+	wire clkTempoMainTheme;
+	wire clkTempoPlaying;
 	
 	// *** instantiate sub modules ***
 `ifndef ICARUS_SIMULATOR
-	pll pll1(.inclk0(clk48), .c0(clk), .c1(vgaclk));
+	pll pll1(.inclk0(clk48), .c0(clk), .c1(vgaclk), .c2(clk10Mhz), .c3(clkTempoMainTheme), .c4(clkTempoPlaying));
+	wire out_speaker_main_theme;
+	wire out_speaker_playing;
+	assign SPEAKER = (game_state == idle && out_speaker_main_theme) || ((game_state == playing || game_state == hit) && out_speaker_playing);
+	music_Yoshi_main_theme music_Main_Theme(.clk10Mhz(clk10Mhz), .clkTempoMainTheme(clkTempoMainTheme), .reset(reset || game_state != idle), .out_speaker_main_theme(out_speaker_main_theme));
+	music_Yoshi_playing music_Playing(.clk10Mhz(clk10Mhz), .clkTempoPlaying(clkTempoPlaying), .reset(reset || !(game_state == playing || game_state == hit)), .out_speaker_playing(out_speaker_playing));
 `endif
 	
 	wire [7:0] ssegp;
@@ -150,43 +161,43 @@ module display_top
 
 	//  *** RGB multiplexing circuit ***
 	// routes correct RGB data depending on video_on, < >_on signals, and game_state signal
-    	always @*
-		begin
-        	if (~video_on)
-			rgb_next = 12'b0; // black
-        	else if(score_on)
-			rgb_next = 12'hFFF;
-				
-		else if(hearts_on)
-			rgb_next = hearts_rgb;
+	always @*
+	begin
+	if (~video_on)
+		rgb_next = 12'b0; // black
+	else if(score_on)
+		rgb_next = 12'hFFF;
 			
-		else if(game_logo_on && game_state == idle)
-			rgb_next = game_logo_rgb;
-				
-		else if(gameover_on && game_state == gameover)
-			rgb_next = gameover_rgb;
-				
-		else if(ghost_crazy_on && game_state != idle)	
-			rgb_next = ghost_crazy_rgb;
-				
-		else if(ghost_bottom_on && game_state != idle)
-			rgb_next = ghost_bottom_rgb;
-				
-		else if(ghost_top_on && game_state != idle)
-			rgb_next = ghost_top_rgb;
-				
-		else if (yoshi_on && game_state != idle)
-			rgb_next = yoshi_rgb;       
-				
-		else if (eggs_on && game_en)
-			rgb_next = eggs_rgb;
+	else if(hearts_on)
+		rgb_next = hearts_rgb;
 		
-		else if(platforms_on)
-                	rgb_next = platforms_rgb;
-				
-            	else
-                	rgb_next = bg_rgb;			
-		end
+	else if(game_logo_on && game_state == idle)
+		rgb_next = game_logo_rgb;
+			
+	else if(gameover_on && game_state == gameover)
+		rgb_next = gameover_rgb;
+			
+	else if(ghost_crazy_on && game_state != idle)	
+		rgb_next = ghost_crazy_rgb;
+			
+	else if(ghost_bottom_on && game_state != idle)
+		rgb_next = ghost_bottom_rgb;
+			
+	else if(ghost_top_on && game_state != idle)
+		rgb_next = ghost_top_rgb;
+			
+	else if (yoshi_on && game_state != idle)
+		rgb_next = yoshi_rgb;       
+			
+	else if (eggs_on && game_en)
+		rgb_next = eggs_rgb;
+	
+	else if(platforms_on)
+		rgb_next = platforms_rgb;
+			
+	else
+		rgb_next = bg_rgb;			
+	end
 	
 	// rgb buffer register
 	always @(posedge vgaclk)
